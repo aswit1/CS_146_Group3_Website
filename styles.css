@@ -1,1 +1,7 @@
 
+.box {
+    width: 500px;
+    height: fit-content;
+    border: 1px solid black;
+    block-size: fit-content;
+}
