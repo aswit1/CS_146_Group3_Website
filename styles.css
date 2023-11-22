@@ -5,3 +5,58 @@
     border: 1px solid black;
     block-size: fit-content;
 }
+
+body {
+    background-color: white;
+    color: black;
+    font-size: 21px;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    padding: 20px;
+}
+
+.business {
+    background-color: white;
+    display: grid;
+    place-items: center;
+}
+
+.business h3 {
+    list-style-type: none;
+
+}
+
+.business h3 a {
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: #000;
+    transition: 0.2s ease-in;
+}
+
+.business h3 a:hover {
+    background-color: lightsteelblue;
+    color:white;
+}
+
+.rating h4 {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+.rating > span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+}
+
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+	   content: "\2605";
+	   position: absolute;
+       color: orange;
+}
