@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
-       <title>The Stevens Consumer</title> 
+        <title>The Stevens Consumer</title> 
+        <link rel="stylesheet" href="styles.css"> 
     </head>
     <body>
         <h1>Submit a Business</h1>
-        <div>
+        <div class="business card">
+            <div>
+                <h3>
+                    <label for="businessname">Business name</label>
+                </h3>
+                <textarea id="businessname" name="businessname" rows="2" cols="50">
+                Enter text here...
+                </textarea>
+            </div>
             <h3>
-                <label for="businessname">Business name</label>
+                <div class="rating">
+                    <span>☆</span>
+                    <span>☆</span>
+                    <span>☆</span>
+                    <span>☆</span>
+                    <span>☆</span>
+                </div>
             </h3>
-            <textarea id="businessname" name="businessname" rows="2" cols="50">
-            Enter text here...
-            </textarea>
-        </div>
-        <div>
-            <h3>
-                <label for="firstreview">Your review</label>
-            </h3>
-            <textarea id="firstreview" name="firstreview" rows="2" cols="50">
-            Enter text here...
-            </textarea>
-        </div>
-        <div>
-            <input type="submit" value="Submit">
+            <div>
+                <h3>
+                    <label for="firstreview">Your review</label>
+                </h3>
+                <textarea id="firstreview" name="firstreview" rows="2" cols="50">
+                Enter text here...
+                </textarea>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
         </div>
     </body>
 </html>
