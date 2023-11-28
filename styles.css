@@ -2,6 +2,7 @@ html, body {
     background-color: white;
     color: black;
     font-size: 21px;
+    overflow-x: none;
 }
 .photo {
     position: absolute;
