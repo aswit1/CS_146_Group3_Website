@@ -55,9 +55,12 @@ h1 {
     color:white;
 }
 
-.rating h4 {
-    unicode-bidi: bidi-override;
-    direction: rtl;
+.rating {
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
 }
 
 .rating > span {
@@ -65,14 +68,22 @@ h1 {
     display: inline-block;
     position: relative;
     width: 1.1em;
+    margin: 0 0.1em;
+}
+
+.rating > span:before {
+    content: "\2605";
+    position: absolute;
+    color: transparent;
+    transition: color 0.3s ease;
 }
 
 .rating > span:hover:before,
 .rating > span:hover ~ span:before {
-    content: "\2605";
-    position: absolute;
     color: orange;
 }
+
+
 
 h5 {
     position: absolute;
