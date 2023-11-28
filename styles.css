@@ -4,6 +4,10 @@ html, body {
     font-size: 21px;
     overflow-x: none;
 }
+
+html {
+    overflow-x: hidden;
+}
 .photo {
     position: absolute;
     margin-left: 500px;
