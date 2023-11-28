@@ -3,6 +3,7 @@
     height: fit-content;
     border: 1px solid black;
     block-size: fit-content;
+    overflow-x: hidden;
 }
 
 body {
