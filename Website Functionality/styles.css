@@ -22,6 +22,20 @@ h3 {
     text-align: center;
 }
 
+.back-to-home-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-home-button:hover {
+    background-color: #2980b9;
+}
+
 .business {
     background-color: white;
     display: grid;
@@ -51,18 +65,32 @@ h3 {
     direction: rtl;
 }
 
+.rating {
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
 .rating > span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     width: 1.1em;
+    margin: 0 0.1em;
+}
+
+.rating > span:before {
+    content: "\2605";
+    position: absolute;
+    color: transparent;
+    transition: color 0.3s ease;
 }
 
 .rating > span:hover:before,
 .rating > span:hover ~ span:before {
-	   content: "\2605";
-	   position: absolute;
-       color: orange;
+    color: orange;
 }
 
 h5 {
