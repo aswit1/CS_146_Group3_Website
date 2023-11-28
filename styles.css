@@ -2,6 +2,11 @@ html, body {
     background-color: white;
     color: black;
     font-size: 21px;
+    overflow-x: none;
+}
+
+html {
+    overflow-x: hidden;
 }
 .photo {
     position: absolute;
