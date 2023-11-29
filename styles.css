@@ -1,14 +1,26 @@
 @media only screen and (max-width: 480px) {
-    
+    body {
+        flex:auto
+    }
+    .allphotos {
+        width: 25%
+    }
+
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
     body {
         flex: auto;
     }
+
+    .allphotos {
+        width: 50%;
+    }
+
 }
 
-html, body {
+html,
+body {
     background-color: white;
     color: black;
     font-size: 21px;
@@ -35,28 +47,31 @@ img {
 .photo1 {
     position: absolute;
     margin-left: 75%;
-    top: 55%;
+    top: 45%;
 }
 
 .photo2 {
     position: absolute;
     margin-left: 50%;
-    top: 90%;
+    top: 70%;
 }
 
 .photo img {
     border-radius: 20%;
     display: inline-block;
+    width: 100%;
 }
 
 .photo1 img {
     border-radius: 20%;
     display: inline-block;
+    width: 100%;
 }
 
 .photo2 img {
     border-radius: 20%;
     display: inline-block;
+    width: 100%;
 }
 
 h1 {
