@@ -191,9 +191,8 @@ p {
 }
 .info {
     background-color: #D8504d;
-    height: 50px;
+    height: auto;
     margin: -8px;
-    padding: 0px;
 
 }
 
@@ -202,8 +201,9 @@ footer a{
     font-family: 'Times New Roman', Times, serif;
     font-weight: 1000px;
     font-size: 17px;
-    margin-left: 175px;
+    margin-left: 100px;
     margin-top: 18px;
+    width: 100%;
 }
 
 .add-button {
