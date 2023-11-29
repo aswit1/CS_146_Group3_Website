@@ -51,7 +51,8 @@ img {
     position: relative;
     width: auto;
     height:auto;
-    top: 100px;
+    /* top: 100px; */
+    margin-top: 0%;
     right: 40%;
     float:right;
     
@@ -61,7 +62,8 @@ img {
     position: relative;
     width: auto;
     height:auto;
-    top: 375px;
+    /* top: 375px; */;
+    margin-top: 22.5%;
     float:right;
 }
 
@@ -69,7 +71,8 @@ img {
     position: relative;
     width: auto;
     height:auto;
-    top: 600px;
+    /* top: 600px; */
+    margin-top: 40%;
     float:right;
     right: 2.5%;
 }
