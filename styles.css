@@ -1,13 +1,10 @@
 @media only screen and (max-width: 480px) {
-    html, body {
-        height: 100%;
-    }
-
+    
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-    html {
-        flex-direction: column;
+    body {
+        flex: auto;
     }
 }
 
@@ -16,13 +13,19 @@ html, body {
     color: black;
     font-size: 21px;
     overflow-x: none;
+    /* width: 100vw;
+    height: 100vh; */
 }
 
 html {
     overflow-x: hidden;
-    display: flex;
-    flex-wrap: wrap;
+    
 }
+
+img {
+    object-fit: cover;
+}
+
 .photo {
     position: absolute;
     margin-left: 50%;
@@ -31,7 +34,7 @@ html {
 
 .photo1 {
     position: absolute;
-    margin-left: 80%;
+    margin-left: 75%;
     top: 55%;
 }
 
