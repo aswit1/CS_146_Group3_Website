@@ -1,7 +1,6 @@
 @media only screen and (max-width: 480px) {
     body {
         flex:auto;
-        width: 100vw;
     }
     .allphotos {
         width: 25%
@@ -30,6 +29,12 @@ body {
     height: 100vh; 
 }
 
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
 html {
     overflow-x: hidden;
     
@@ -40,21 +45,33 @@ img {
 }
 
 .photo {
-    position: absolute;
+    /* position: absolute;
     margin-left: 50%;
-    top: 20%;
+    top: 20%; */
+    position: relative;
+    width: auto;
+    height:auto;
+    top: 100px;
+    right: 40%;
+    float:right;
+    
 }
 
 .photo1 {
-    position: absolute;
-    margin-left: 75%;
-    top: 45%;
+    position: relative;
+    width: auto;
+    height:auto;
+    top: 375px;
+    float:right;
 }
 
 .photo2 {
-    position: absolute;
-    margin-left: 50%;
-    top: 70%;
+    position: relative;
+    width: auto;
+    height:auto;
+    top: 600px;
+    float:right;
+    right: 2.5%;
 }
 
 .photo img {
