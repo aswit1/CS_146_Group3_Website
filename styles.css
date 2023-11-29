@@ -1,3 +1,20 @@
+@media only screen and (max-width: 480px) {
+    html, body {
+        height: 100%;
+    }
+
+    .add-button{
+        margin-right: 10px;
+    }
+    
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    html {
+        flex-direction: column;
+    }
+}
+
 html, body {
     background-color: white;
     color: black;
@@ -7,26 +24,25 @@ html, body {
 
 html {
     overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
 }
 .photo {
     position: absolute;
-    margin-left: 500px;
-    top: 15%;
-    padding: 20px 200px;
+    margin-left: 50%;
+    top: 20%;
 }
 
 .photo1 {
     position: absolute;
-    margin-left: 500px;
-    top: 40%;
-    padding: 20px 475px;
+    margin-left: 70%;
+    top: 65%;
 }
 
 .photo2 {
     position: absolute;
-    margin-left: 500px;
-    top: 65%;
-    padding: 20px 200px;
+    margin-left: 50%;
+    top: 110%;
 }
 
 .photo img {
@@ -45,6 +61,7 @@ html {
 }
 
 h1 {
+
     text-align: left;
     color: black;
     padding: 20px;
@@ -176,6 +193,7 @@ footer a{
 
 .add-button {
     display: inline-block;
+    right: 10%;
     padding: 10px 15px;
     background: #D8504d;
     color:inherit;
