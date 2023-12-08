@@ -7,15 +7,22 @@
         width: 25%
     }
 
+    footer {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
     body {
         flex: auto;
+        width: 100vw;
     }
 
-    .allphotos {
-        width: 50%;
+    #allphotos {
+        width: 10%;
     }
 
 }
@@ -47,14 +54,14 @@ img {
 
 .photo1 {
     position: absolute;
-    margin-left: 75%;
+    margin-left: 65%;
     top: 45%;
 }
 
 .photo2 {
     position: absolute;
     margin-left: 50%;
-    top: 70%;
+    top: 60%;
 }
 
 .photo img {
@@ -190,21 +197,14 @@ p {
     padding: 2px 16px;
 }
 .info {
-    background-color: #D8504d;
-    height: auto;
-    margin: -8px;
-
-}
-
-footer a{
     display: inline-block;
     font-family: 'Times New Roman', Times, serif;
-    font-weight: 1000px;
-    font-size: 17px;
-    margin-left: 100px;
-    margin-top: 18px;
-    width: 100%;
+    margin: auto; 
 }
+footer a {
+    background-color: #D8504d;
+}
+
 
 .add-button {
     display: inline-block;
