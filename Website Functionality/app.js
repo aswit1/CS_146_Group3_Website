@@ -8,3 +8,10 @@ function submitBusiness() {
     newBusinessReview.value= "";
     alert("Submitted successfully!");
 }
+
+function clearText() {
+    const clearBusinessValue = document.getElementById("businessName");
+    const clearReviewValue = document.getElementById("businessReview");
+    clearBusinessValue.value = "";
+    clearReviewValue.value = "";
+};
