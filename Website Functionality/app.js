@@ -9,9 +9,12 @@ function submitBusiness() {
     alert("Submitted successfully!");
 }
 
-function clearText() {
+function clearTextBusiness() {
     const clearBusinessValue = document.getElementById("businessName");
-    const clearReviewValue = document.getElementById("businessReview");
     clearBusinessValue.value = "";
+};
+
+function clearTextReview() {
+    const clearReviewValue = document.getElementById("businessReview");
     clearReviewValue.value = "";
 };
