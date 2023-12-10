@@ -3,6 +3,7 @@
     <head>
         <title>The Stevens Consumer</title> 
         <link rel="stylesheet" href="styles.css"> 
+        <script type="text/javascript" src="app.js"></script>
     </head>
     <body>
         <a href="../index.html" class="back-to-home-button">Back to Home</a>
@@ -12,9 +13,7 @@
                 <h3>
                     <label for="businessname">Business name</label>
                 </h3>
-                <textarea id="businessname" name="businessname" rows="2" cols="50">
-                Enter text here...
-                </textarea>
+                <input type="text" value="Enter name here..." id="businessName" onclick="clearTextBusiness()">
             </div>
             <h3>
                 <div class="rating">
@@ -29,12 +28,10 @@
                 <h3>
                     <label for="firstreview">Your review</label>
                 </h3>
-                <textarea id="firstreview" name="firstreview" rows="2" cols="50">
-                Enter text here...
-                </textarea>
+                <input type="text" value="Enter review here..." id="businessReview" onclick="clearTextReview()">
             </div>
             <div>
-                <input type="submit" value="Submit">
+                <button onclick="submitBusiness()">Submit</button>
             </div>
         </div>
     </body>
