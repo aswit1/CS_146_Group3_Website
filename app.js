@@ -1,24 +1,21 @@
 
 function submitBusiness() {
     var newBusiness = document.getElementById("businessName");
-    var newBusinessReview = document.getElementById("businessReview");
     var newBusiness_copy = (' ' + newBusiness.value).slice(1);
     var newBusinessReview_copy = (' ' + newBusiness.value).slice(1);
     newBusiness.value = "";
-    newBusinessReview.value= "";
-    document.getElementById("newBusinessName").innerHTML;
     alert("Submitted successfully! Our team will review your business.");
 }
 
-function clearTextBusiness() {
-    const clearBusinessValue = document.getElementById("businessName");
-    clearBusinessValue.value = "";
-};
+//function clearTextBusiness() {
+//    const clearBusinessValue = document.getElementById("businessName");
+//    clearBusinessValue.value = "";
+//};
 
-function clearTextReview() {
-    const clearReviewValue = document.getElementById("businessReview");
-    clearReviewValue.value = "";
-};
+//function clearTextReview() {
+//    const clearReviewValue = document.getElementById("businessReview");
+//    clearReviewValue.value = "";
+//};
 
 function addBusiness (newBusiness) {
     var newBusinessDiv = document.createElement("div");
