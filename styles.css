@@ -1,13 +1,21 @@
+
+html,
+body {
+    background-color: white;
+    color: black;
+    font-size: 21px;
+    overflow-x: none;
+    width: 100vw;
+    height: 100vh; 
+}
+
 html {
     overflow-x: hidden;
     max-height: 100%;
     max-height: 100%;
 }
 
-#bagel, #pizza, #coffee {
-    border-radius: 20px;
-    display: flex;
-}
+
 
 h1 {
 
@@ -69,8 +77,8 @@ p {
 .info {
     background-color: #D8504d;
     height: 50px;
-    margin: -8px;
     padding: 0px;
+    margin: -8px;
     text-align: center;
 
 }
@@ -83,6 +91,7 @@ footer a{
     margin-top: 18px;
     width: 100%;
 }
+
 
 .add-button {
     position: relative;
@@ -110,12 +119,12 @@ footer a{
 
 img {
     width: auto;
-    height: 150px;   
+    height: 200px;   
     position: relative;
     max-width: 30%;
     float: right;
     margin-right: 10%; 
-    border-radius: 5%;
+    border-radius: 20px;
 }
 
 /* .row {
