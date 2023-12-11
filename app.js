@@ -6,9 +6,8 @@ function submitBusiness() {
     var newBusinessReview_copy = (' ' + newBusiness.value).slice(1);
     newBusiness.value = "";
     newBusinessReview.value= "";
-    addBusiness();
     document.getElementById("newBusinessName").innerHTML;
-    alert("Submitted successfully!");
+    alert("Submitted successfully! Our team will review your business.");
 }
 
 function clearTextBusiness() {
@@ -21,12 +20,14 @@ function clearTextReview() {
     clearReviewValue.value = "";
 };
 
-function addBusiness () {
+function addBusiness (newBusiness) {
     var newBusinessDiv = document.createElement("div");
     document.getElementById("newBusinessesGoHere").appendChild(newBusinessDiv);
     newBusinessDiv.className = "business card";
-    //newBusinessDiv.innerHTML = "<span><h3><span id="newBusinessName"></span></h3><div class="container"><p>Location</p><h4><div class="rating"><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div></h4></div></span>";
+    newBusinessDiv.innerHTML = "<span><h3>${newBusiness}</h3></span>";
 }
+//<span id="newBusinessName"></span>
+//<div class="container"><p>Location</p><h4><div class="rating"><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div></h4></div></span>
 
 const ratingStars = [...document.getElementsByClassName("rating__star")];
 const ratingResult = document.querySelector(".rating__result");
