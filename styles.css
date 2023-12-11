@@ -4,7 +4,7 @@ html {
     max-height: 100%;
 }
 
-#bagel {
+#bagel, #pizza, #coffee {
     border-radius: 20px;
     display: flex;
 }
@@ -71,6 +71,7 @@ p {
     height: 50px;
     margin: -8px;
     padding: 0px;
+    text-align: center;
 
 }
 
@@ -79,7 +80,6 @@ footer a{
     font-family: 'Times New Roman', Times, serif;
     font-weight: 1000px;
     font-size: 17px;
-    margin-left: 175px;
     margin-top: 18px;
     width: 100%;
 }
