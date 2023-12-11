@@ -1,5 +1,5 @@
 html {
-    overflow-x: hidden;
+    overflow-x: none;
 }
 
 h1 {
@@ -161,3 +161,17 @@ footer a{
 .add-button:hover {
     background-color: #a72f2d;
 }
+
+img {
+    width: auto;
+    height: 150px;   
+    position: relative;
+    max-width: 30%;
+    float: right;
+    margin-right: 10%;
+}
+
+/* .row {
+    display: inline-flex;
+    width: 100%;
+} */
