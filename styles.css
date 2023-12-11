@@ -151,3 +151,7 @@ img {
 .rating__star:hover {
     filter: drop-shadow(1px 1px 4px gold);
 }
+
+.one1, .two1, .three1, .four1, .one2, .two2, .three2, .one3, .two3, .three3, .four3, .five3 {
+    color: orange;
+}
