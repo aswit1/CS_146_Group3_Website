@@ -61,39 +61,6 @@ h3 {
     color:white;
 }
 
-.rating h4 {
-    unicode-bidi: bidi-override;
-    direction: rtl;
-}
-
-.rating {
-    text-align: center;
-    font-size: 24px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-}
-
-.rating > span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    width: 1.1em;
-    margin: 0 0.1em;
-}
-
-.rating > span:before {
-    content: "\2605";
-    position: absolute;
-    color: transparent;
-    transition: color 0.3s ease;
-}
-
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
-    color: orange;
-}
-
 h5 {
     position: absolute;
     top: -5px;
@@ -117,4 +84,40 @@ h5 {
 
 .container{
     padding: 0px 8px;
+}
+
+.rating {
+    position: relative;
+    width: 180px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3em;
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 2px #b3acac;
+}
+ 
+.rating__result {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-10px) translateX(-5px);
+    z-index: -9;
+    font: 3em Arial, Helvetica, sans-serif;
+    color: #ebebeb8e;
+    pointer-events: none;
+}
+ 
+.rating__star {
+    font-size: 1.3em;
+    cursor: pointer;
+    color: #dabd18b2;
+    transition: filter linear .3s;
+}
+ 
+.rating__star:hover {
+    filter: drop-shadow(1px 1px 4px gold);
 }
