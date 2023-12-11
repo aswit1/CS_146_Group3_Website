@@ -13,23 +13,18 @@
                 <h3>
                     <label for="businessname">Business name</label>
                 </h3>
-                <input type="text" value="Enter name here..." id="businessName" onclick="clearTextBusiness()">
+                <input type="text" value="Enter name here..." id="businessName">
             </div>
             <h3>
                 <div class="rating">
-                    <span>☆</span>
-                    <span>☆</span>
-                    <span>☆</span>
-                    <span>☆</span>
-                    <span>☆</span>
+                    <span class="rating__result"></span>
+                    <i class="rating__star far fa-star">☆</i>
+                    <i class="rating__star far fa-star">☆</i>
+                    <i class="rating__star far fa-star">☆</i>
+                    <i class="rating__star far fa-star">☆</i>
+                    <i class="rating__star far fa-star">☆</i>
                 </div>
             </h3>
-            <div>
-                <h3>
-                    <label for="firstreview">Your review</label>
-                </h3>
-                <input type="text" value="Enter review here..." id="businessReview" onclick="clearTextReview()">
-            </div>
             <div>
                 <button onclick="submitBusiness()">Submit</button>
             </div>
