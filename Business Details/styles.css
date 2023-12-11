@@ -111,6 +111,14 @@ h5 {
 }
 
 .container{
-    padding: 2px 16px;
+    padding: 20px 16px;
     display: inline-flex;
+
+}
+
+img {
+    height: 200px;
+    width: auto;
+    margin: 0px 40px;
+    border-radius: 20px;
 }
