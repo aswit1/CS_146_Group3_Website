@@ -37,6 +37,8 @@ h1 {
     background-color: white;
     display: grid;
     place-items: center;
+    min-width: fit-content;
+
 }
 
 .business h3 {
@@ -101,6 +103,7 @@ h5 {
     transition: 0.3s;
     background-color: #D8504d;
     border-radius: 50px;
+    display: flexbox;
 }
 
 .card:hover{
