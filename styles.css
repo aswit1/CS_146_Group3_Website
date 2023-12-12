@@ -12,7 +12,6 @@ body {
 html {
     overflow-x: hidden;
     max-height: 100%;
-    max-height: 100%;
 }
 
 
@@ -47,7 +46,6 @@ h1 {
     background-color: #D8504d;
     border-radius:  100px;
     float: left;
-    /* margin-right:1200px; */
     margin-bottom: 20px;
     width: 50vw;
     height: 75px;
@@ -171,43 +169,3 @@ img {
   .my-star3:not(.is-active):hover{
     color: #fb8900;
   }
-
-/* .rating {
-    position: relative;
-    width: 180px;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .3em;
-    padding: 5px;
-    overflow: hidden;
-}
-
-.rating__result {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-10px) translateX(-5px);
-    z-index: -9;
-    font: 3em Arial, Helvetica, sans-serif;
-    color: #ebebeb8e;
-    pointer-events: none;
-}
-
-.rating__star {
-    font-size: 1.3em;
-    cursor: pointer;
-    color: #dabd18b2;
-    transition: filter linear .3s;
-}
-
-.rating__star:hover {
-    filter: drop-shadow(1px 1px 4px gold);
-}
-
-
-.one1, .two1, .three1, .four1, .one2, .two2, .three2, .one3, .two3, .three3, .four3, .five3 {
-    color: orange;
-} */
-
