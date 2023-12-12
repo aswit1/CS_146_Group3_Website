@@ -9,14 +9,14 @@
         <a href="../index.html" class="back-to-home-button">Back to Home</a>
         <h1>Suggest a New Business</h1>
         <div class="business card">
-            <form action="#" id="formSubmission" method="get">
+            <form action="#" id="formSubmission" method="get" class="new">
                 <span>Name</span>
                 <input type="text" placeholder="Enter Business Name" id="name">        
                 <span>Location</span>  
                 <input type="text" placeholder="Enter Location" id="location">
                 <span>Rating</span>
                 <input type="text" placeholder="Enter Rating out of 5" id="rating">
-                <button type="submit" onclick="submitBusiness()">Submit</button>     
+                <button type="submit" onclick="submitBusiness(); post()">Submit</button>     
                 <!-- <div>
                     <h3>
                         <label for="businessName">Business name:</label>
