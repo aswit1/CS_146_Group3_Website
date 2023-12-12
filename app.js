@@ -9,6 +9,7 @@ function submitBusiness() {
     alert("Submitted successfully! Our team will review your business.");
 }
 
+
 function addBusiness (newBusiness) {
     var newBusinessDiv = document.createElement("div");
     document.getElementById("newBusinessesGoHere").appendChild(newBusinessDiv);
@@ -16,62 +17,44 @@ function addBusiness (newBusiness) {
     newBusinessDiv.innerHTML = "<span><h3>${newBusiness}</h3></span>";
 }
 
-// const ratingStars = [...document.getElementsByClassName("rating__star")];
-// const ratingResult = document.querySelector(".rating__result");
-
-// printRatingResult(ratingResult);
-
-// function executeRating(stars, result) {
-//     const starClassActive = "rating__star fas fa-star";
-//     const starClassInactive = "rating__star far fa-star";
-//     const starsLength = stars.length;
-//     let i;
-//     stars.map((star) => {
-//         star.onclick = () => {
-//             i = stars.indexOf(star);
-//             if (star.className.indexOf(starClassInactive) !== -1) {
-//                 printRatingResult(result, i+1);
-//                 for (i; i >= 0; --i) stars[i].className = starClassActive;
-//             } else {
-//                 printRatingResult(result, i);
-//                 for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
-//             }
-//         }
-//     });
-// }
-
-// function printRatingResult(result, num = 0) {
-//     result.textContent = '${num}/5';
-// }
-// executeRating(ratingStars, ratingResult);
-
-const ratingStars = document.getElementsByClassName("rating__star");
-const ratingResult = document.querySelector(".rating__result");
-
-printRatingResult(ratingResult);
-
-function executeRating(stars, result) {
-   const starClassActive = "rating__star fas fa-star";
-   const starClassUnactive = "rating__star far fa-star";
-   const starsLength = stars.length;
-   let i;
-   stars.map((star) => {
-      star.onclick = () => {
-         i = stars.indexOf(star);
-
-         if (star.className.indexOf(starClassUnactive) !== -1) {
-            printRatingResult(result, i + 1);
-            for (i; i >= 0; --i) stars[i].className = starClassActive;
-         } else {
-            printRatingResult(result, i);
-            for (i; i < starsLength; ++i) stars[i].className = starClassUnactive;
-         }
-      };
-   });
-}
-
-function printRatingResult(result, num = 0) {
-   result.textContent = `${num}/5`;
-}
-
-executeRating(ratingStars, ratingResult);
+document.addEventListener('DOMContentLoaded', function(){
+   (function(){
+       let sr = document.querySelectorAll('.my-star');
+       let i = 0;
+       //loop through stars
+       while (i < sr.length){
+           //attach click event
+           sr[i].addEventListener('click', function(){
+               //current star
+               let cs = parseInt(this.getAttribute("data-star"));
+               //output current clicked star value
+               document.querySelector('#output').value = cs;
+               /*our first loop to set the class on preceding star elements*/
+               let pre = cs; //set the current star value
+               //loop through and set the active class on preceding stars
+               while(1 <= pre){
+                   //check if the classlist contains the active class, if not, add the class
+                   if(!document.querySelector('.star-'+pre).classList.contains('is-active')){
+                       document.querySelector('.star-'+pre).classList.add('is-active');
+                   }
+                   //decrement our current index
+                   --pre;
+               }//end of first loop
+ 
+               /*our second loop to unset the class on succeeding star elements*/ 
+               //loop through and unset the active class, skipping the current star
+               let succ = cs+1;
+               while(5 >= succ){
+                   //check if the classlist contains the active class, if yes, remove the class
+                   if(document.querySelector('.star-'+succ).classList.contains('is-active')){
+                       document.querySelector('.star-'+succ).classList.remove('is-active');
+                   }
+                   //increment current index
+                   ++succ;
+               }
+ 
+           })//end of click event
+           i++;
+       }//end of while loop
+   })();//end of function
+ })

@@ -96,8 +96,6 @@ h5 {
     gap: .3em;
     padding: 5px;
     overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 0 2px #b3acac;
 }
  
 .rating__result {
