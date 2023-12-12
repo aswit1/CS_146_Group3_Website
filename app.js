@@ -1,21 +1,47 @@
 
-function submitBusiness() {
-    var newBusiness = document.getElementById("businessName");
-    var newBusinessLocation = document.getElementById("businessLocation");
-    var newBusiness_copy = (' ' + newBusiness.value).slice(1);
-    var newBusinessLocation_copy = (' ' + newBusinessLocation.value).slice(1);
-    newBusiness.value = "";
-    newBusinessLocation.value = "";
-    alert("Submitted successfully! Our team will review your business.");
-}
+
+// const form = document.querySelector('form');
+
+// form.addEventListener('submit', (e) => {
+//    e.preventDefault();
+//    const fd = new FormData(form);
+//    const obj = Object.fromEntries(fd);
+//    console.log(obj)
+
+//    const json = JSON.stringify(obj);
+//    localStorage.setItem('form', json);
+
+//    window.location.href = "confirm.html"
+// })
+
+// let saveFile = () => {
+//    const name = document.getElementById('businessName');
+//    const location = document.getElementById('businessLocation');
+
+//    let data = 
+//       '\r Name: ' + name.value + ' \r\n ' +
+//       'Location: ' + location.value;
+
+//    const textToBLOB = new Blob([data], { type: 'text/plain '});
+//    const sFileName = 'formData.txt';
+
+//    let newLink = document.createElement("a");
+//    newLink.download = sFileName;
+
+//    if (window.webkitURL != null) {
+//       newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+//       console.log (newLink);
+//    }
+//    else {
+//       newLink.href = window.URL.createObjectURL(textToBLOB);
+//       newLink.style.display = "none";
+//       document.body.appendChild(newLink);
+//    }
+//    newLink.click();
+
+// }
 
 
-function addBusiness (newBusiness) {
-    var newBusinessDiv = document.createElement("div");
-    document.getElementById("newBusinessesGoHere").appendChild(newBusinessDiv);
-    newBusinessDiv.className = "business card";
-    newBusinessDiv.innerHTML = "<span><h3>${newBusiness}</h3></span>";
-}
 
 //starting all users average rating & number of submissions (arbitrary)
 var userAverage1 = 4.1;
