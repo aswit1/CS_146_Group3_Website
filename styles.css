@@ -127,12 +127,28 @@ img {
     border-radius: 20px;
 }
 
-/* .row {
-    display: inline-flex;
-    width: 100%;
-} */
+.star-rating{
+    color: #bebebe;
+    font-size:2em;
+  }
+  
+  .my-star::before{
+    content:"\002605"
+  }
+  
+  .my-star{
+    font-style: unset !important;
+  }
+  
+  .is-active{
+    color:#fb8900;
+  }
+  
+  .my-star:not(.is-active):hover{
+    color: #fb8900;
+  }
 
-.rating {
+/* .rating {
     position: relative;
     width: 180px;
     background: transparent;
@@ -169,5 +185,5 @@ img {
 
 .one1, .two1, .three1, .four1, .one2, .two2, .three2, .one3, .two3, .three3, .four3, .five3 {
     color: orange;
-}
+} */
 

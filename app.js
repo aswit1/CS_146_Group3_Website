@@ -7,47 +7,6 @@ function submitBusiness() {
     alert("Submitted successfully! Our team will review your business.");
 }
 
-// let stars = document.querySelectorAll(".ratings span");
-// let products = document.querySelectorAll(".ratings");
-// let ratings = [];
-
-// for (let star of stars){
-//    star.addEventListener("click", function(){
-//       let children = star.parentElement.children;
-//       for(let child of children){
-//          if(child.getAttribute("data-clicked")){
-//             return false;
-//          }
-//       }
-
-
-//       this.setAttribute("data-clicked", "true");
-//       let rating = this.dataset.rating;
-//       let productId = this.parentElement.dataset.productid
-      
-//       let data = {
-//          "stars": rating,
-//          "product-id": productId
-//       }
-//       ratings.push(data);
-//       localStorage.setItem("rating", JSON.stringify(ratings));
-//    });
-// }
-
-// if(localStorage.getItem("rating")){
-//    ratings = JSON.parse(localStorage.getItem("rating"));
-//    for(let rating of ratings){
-//       for (let product of products){
-//          if(rating["product-id"] == product.dataset.productid){
-//             let reversedStars = Array.from(product.children).reverse();
-//             let index = parseInt(rating["stars"]) - 1;
-//             reversedStars[index].setAttribute("data-clicked", "true");
-
-//          }
-//       }
-//    }
-// }
-
 
 function addBusiness (newBusiness) {
     var newBusinessDiv = document.createElement("div");
@@ -56,3 +15,44 @@ function addBusiness (newBusiness) {
     newBusinessDiv.innerHTML = "<span><h3>${newBusiness}</h3></span>";
 }
 
+document.addEventListener('DOMContentLoaded', function(){
+   (function(){
+       let sr = document.querySelectorAll('.my-star');
+       let i = 0;
+       //loop through stars
+       while (i < sr.length){
+           //attach click event
+           sr[i].addEventListener('click', function(){
+               //current star
+               let cs = parseInt(this.getAttribute("data-star"));
+               //output current clicked star value
+               document.querySelector('#output').value = cs;
+               /*our first loop to set the class on preceding star elements*/
+               let pre = cs; //set the current star value
+               //loop through and set the active class on preceding stars
+               while(1 <= pre){
+                   //check if the classlist contains the active class, if not, add the class
+                   if(!document.querySelector('.star-'+pre).classList.contains('is-active')){
+                       document.querySelector('.star-'+pre).classList.add('is-active');
+                   }
+                   //decrement our current index
+                   --pre;
+               }//end of first loop
+ 
+               /*our second loop to unset the class on succeeding star elements*/ 
+               //loop through and unset the active class, skipping the current star
+               let succ = cs+1;
+               while(5 >= succ){
+                   //check if the classlist contains the active class, if yes, remove the class
+                   if(document.querySelector('.star-'+succ).classList.contains('is-active')){
+                       document.querySelector('.star-'+succ).classList.remove('is-active');
+                   }
+                   //increment current index
+                   ++succ;
+               }
+ 
+           })//end of click event
+           i++;
+       }//end of while loop
+   })();//end of function
+ })
