@@ -1,10 +1,8 @@
 function submitBusiness() {
-    var newBusiness = document.getElementById("businessName");
-    var newBusinessLocation = document.getElementById("businessLocation");
+    var newBusiness = document.getElementById("name");
+    var newBusinessLocation = document.getElementById("location");
     var newBusiness_copy = (' ' + newBusiness.value).slice(1);
     var newBusinessLocation_copy = (' ' + newBusinessLocation.value).slice(1);
-    newBusiness.value = "";
-    newBusinessLocation.value = "";
     alert("Submitted successfully! Our team will review your business.");
 }
 
