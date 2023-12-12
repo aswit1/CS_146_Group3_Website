@@ -119,7 +119,7 @@ footer a{
 
 img {
     width: auto;
-    height: 200px;   
+    height: 400px;   
     position: relative;
     max-width: 30%;
     float: right;
@@ -145,6 +145,30 @@ img {
   }
   
   .my-star:not(.is-active):hover{
+    color: #fb8900;
+  }
+
+  .my-star2::before{
+    content:"\002605"
+  }
+
+  .my-star2{
+    font-style: unset !important;
+  }
+
+  .my-star2:not(.is-active):hover{
+    color: #fb8900;
+  }
+
+  .my-star3::before{
+    content:"\002605"
+  }
+
+  .my-star3{
+    font-style: unset !important;
+  }
+
+  .my-star3:not(.is-active):hover{
     color: #fb8900;
   }
 
