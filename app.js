@@ -1,21 +1,13 @@
 
 function submitBusiness() {
     var newBusiness = document.getElementById("businessName");
+    var newBusinessLocation = document.getElementById("businessLocation");
     var newBusiness_copy = (' ' + newBusiness.value).slice(1);
-    var newBusinessReview_copy = (' ' + newBusiness.value).slice(1);
+    var newBusinessLocation_copy = (' ' + newBusinessLocation.value).slice(1);
     newBusiness.value = "";
+    newBusinessLocation.value = "";
     alert("Submitted successfully! Our team will review your business.");
 }
-
-//function clearTextBusiness() {
-//    const clearBusinessValue = document.getElementById("businessName");
-//    clearBusinessValue.value = "";
-//};
-
-//function clearTextReview() {
-//    const clearReviewValue = document.getElementById("businessReview");
-//    clearReviewValue.value = "";
-//};
 
 function addBusiness (newBusiness) {
     var newBusinessDiv = document.createElement("div");
@@ -23,8 +15,6 @@ function addBusiness (newBusiness) {
     newBusinessDiv.className = "business card";
     newBusinessDiv.innerHTML = "<span><h3>${newBusiness}</h3></span>";
 }
-//<span id="newBusinessName"></span>
-//<div class="container"><p>Location</p><h4><div class="rating"><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div></h4></div></span>
 
 // const ratingStars = [...document.getElementsByClassName("rating__star")];
 // const ratingResult = document.querySelector(".rating__result");
