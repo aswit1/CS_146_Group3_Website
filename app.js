@@ -7,15 +7,47 @@ function submitBusiness() {
     alert("Submitted successfully! Our team will review your business.");
 }
 
-//function clearTextBusiness() {
-//    const clearBusinessValue = document.getElementById("businessName");
-//    clearBusinessValue.value = "";
-//};
+// let stars = document.querySelectorAll(".ratings span");
+// let products = document.querySelectorAll(".ratings");
+// let ratings = [];
 
-//function clearTextReview() {
-//    const clearReviewValue = document.getElementById("businessReview");
-//    clearReviewValue.value = "";
-//};
+// for (let star of stars){
+//    star.addEventListener("click", function(){
+//       let children = star.parentElement.children;
+//       for(let child of children){
+//          if(child.getAttribute("data-clicked")){
+//             return false;
+//          }
+//       }
+
+
+//       this.setAttribute("data-clicked", "true");
+//       let rating = this.dataset.rating;
+//       let productId = this.parentElement.dataset.productid
+      
+//       let data = {
+//          "stars": rating,
+//          "product-id": productId
+//       }
+//       ratings.push(data);
+//       localStorage.setItem("rating", JSON.stringify(ratings));
+//    });
+// }
+
+// if(localStorage.getItem("rating")){
+//    ratings = JSON.parse(localStorage.getItem("rating"));
+//    for(let rating of ratings){
+//       for (let product of products){
+//          if(rating["product-id"] == product.dataset.productid){
+//             let reversedStars = Array.from(product.children).reverse();
+//             let index = parseInt(rating["stars"]) - 1;
+//             reversedStars[index].setAttribute("data-clicked", "true");
+
+//          }
+//       }
+//    }
+// }
+
 
 function addBusiness (newBusiness) {
     var newBusinessDiv = document.createElement("div");
@@ -23,65 +55,4 @@ function addBusiness (newBusiness) {
     newBusinessDiv.className = "business card";
     newBusinessDiv.innerHTML = "<span><h3>${newBusiness}</h3></span>";
 }
-//<span id="newBusinessName"></span>
-//<div class="container"><p>Location</p><h4><div class="rating"><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div></h4></div></span>
 
-// const ratingStars = [...document.getElementsByClassName("rating__star")];
-// const ratingResult = document.querySelector(".rating__result");
-
-// printRatingResult(ratingResult);
-
-// function executeRating(stars, result) {
-//     const starClassActive = "rating__star fas fa-star";
-//     const starClassInactive = "rating__star far fa-star";
-//     const starsLength = stars.length;
-//     let i;
-//     stars.map((star) => {
-//         star.onclick = () => {
-//             i = stars.indexOf(star);
-//             if (star.className.indexOf(starClassInactive) !== -1) {
-//                 printRatingResult(result, i+1);
-//                 for (i; i >= 0; --i) stars[i].className = starClassActive;
-//             } else {
-//                 printRatingResult(result, i);
-//                 for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
-//             }
-//         }
-//     });
-// }
-
-// function printRatingResult(result, num = 0) {
-//     result.textContent = '${num}/5';
-// }
-// executeRating(ratingStars, ratingResult);
-
-const ratingStars = document.getElementsByClassName("rating__star");
-const ratingResult = document.querySelector(".rating__result");
-
-printRatingResult(ratingResult);
-
-function executeRating(stars, result) {
-   const starClassActive = "rating__star fas fa-star";
-   const starClassUnactive = "rating__star far fa-star";
-   const starsLength = stars.length;
-   let i;
-   stars.map((star) => {
-      star.onclick = () => {
-         i = stars.indexOf(star);
-
-         if (star.className.indexOf(starClassUnactive) !== -1) {
-            printRatingResult(result, i + 1);
-            for (i; i >= 0; --i) stars[i].className = starClassActive;
-         } else {
-            printRatingResult(result, i);
-            for (i; i < starsLength; ++i) stars[i].className = starClassUnactive;
-         }
-      };
-   });
-}
-
-function printRatingResult(result, num = 0) {
-   result.textContent = `${num}/5`;
-}
-
-executeRating(ratingStars, ratingResult);

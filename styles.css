@@ -106,7 +106,7 @@ footer a{
     font-weight: 800;
     outline: solid;
     outline-width: 2px;
-    outline-color: gray;
+    outline-color: black;
     border-radius: 10px;
     width: 30%;
     text-align: center;
@@ -142,10 +142,8 @@ img {
     gap: .3em;
     padding: 5px;
     overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 0 2px #b3acac;
 }
- 
+
 .rating__result {
     position: absolute;
     top: 0;
@@ -156,18 +154,20 @@ img {
     color: #ebebeb8e;
     pointer-events: none;
 }
- 
+
 .rating__star {
     font-size: 1.3em;
     cursor: pointer;
     color: #dabd18b2;
     transition: filter linear .3s;
 }
- 
+
 .rating__star:hover {
     filter: drop-shadow(1px 1px 4px gold);
 }
 
+
 .one1, .two1, .three1, .four1, .one2, .two2, .three2, .one3, .two3, .three3, .four3, .five3 {
     color: orange;
 }
+
