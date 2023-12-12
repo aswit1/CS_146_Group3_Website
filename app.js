@@ -17,7 +17,49 @@ function addBusiness (newBusiness) {
     newBusinessDiv.innerHTML = "<span><h3>${newBusiness}</h3></span>";
 }
 
+//starting all users average rating & number of submissions (arbitrary)
+var userAverage1 = 4.1;
+var userSubmissions1 = 10;
+var userAverage2 = 2.7;
+var userSubmissions2 = 10;
+var userAverage3 = 4.8;
+var userSubmissions3 = 20;
+
+function submitStarRating1() {
+    //update average user score for 1st business
+    var currentTotal = (userAverage1*userSubmissions1);
+    var userRating = parseFloat(document.getElementById("output").value);
+    var newTotal = (currentTotal+userRating);
+    userSubmissions1++;
+    userAverage1 = (newTotal/userSubmissions1);
+    document.getElementById("userScore1").innerHTML = userAverage1;
+}
+
+function submitStarRating2() {
+    //update average user score for 2nd business
+    var currentTotal = (userAverage2*userSubmissions2);
+    var userRating = parseFloat(document.getElementById("output").value);
+    var newTotal = (currentTotal+userRating);
+    userSubmissions2++;
+    userAverage2 = (newTotal/userSubmissions2);
+    document.getElementById("userScore2").innerHTML = userAverage2;
+}
+
+function submitStarRating3() {
+    //update average user score for 3rd business
+    var currentTotal = (userAverage3*userSubmissions3);
+    var userRating = parseFloat(document.getElementById("output").value);
+    var newTotal = (currentTotal+userRating);
+    userSubmissions3++;
+    userAverage3 = (newTotal/userSubmissions3);
+    document.getElementById("userScore3").innerHTML = userAverage3;
+}
+
 document.addEventListener('DOMContentLoaded', function(){
+    //load starting average user scores
+    document.getElementById("userScore1").innerHTML = userAverage1;
+    document.getElementById("userScore2").innerHTML = userAverage2;
+    document.getElementById("userScore3").innerHTML = userAverage3;
    (function(){
        let sr = document.querySelectorAll('.my-star');
        let i = 0;
